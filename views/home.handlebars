@@ -1,0 +1,103 @@
+ <div id="home">
+        <!-- NAVBAR -->
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">Mongo Scraper</a>
+                        <a href="" data-target="mobile-nav" class="sidenav-trigger"><i
+                                class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#search">Search</a>
+                            </li>
+                            <li>
+                                <a href="#popular">Popular Places</a>
+                            </li>
+                            <li>
+                                <a href="#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-nav">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#search">Search</a>
+            </li>
+            <li>
+                <a href="#popular">Popular Places</a>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <!-- SECTION: SLIDER -->
+        <section class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="/assets/images/hpDailyProphet.jpg">
+                    <div class="caption center-align">
+                        <h2>MONGO SCRAPER</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Accio Articles!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="/assets/images/hpDP2.jpeg">
+                    <div class="caption left-align">
+                        <h2>MONGO SCRAPER</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Accio Articles!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="/assets/images/sepiaDP.jpeg">
+                    <div class="caption right-align">
+                        <h2>MONGO SCRAPER</h2>
+                        <h5 class="light grey-text text-lighten-3 hide-on-small-only">Accio Articles!</h5>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <br><br><br><br><br>
+        </section>
+
+        <footer class="section black darken-2 white-text center">
+                <p class="flow-text">Rachael Whitefield &copy; 2019</p>
+            </footer>
+
+
+        <!--JavaScript at end of body for optimized loading-->
+        <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            // Sidenav
+            const sideNav = document.querySelector(".sidenav");
+            M.Sidenav.init(sideNav, {});
+
+            // Slider
+            const slider = document.querySelector(".slider");
+            M.Slider.init(slider, {
+                indicators: false,
+                height: 500,
+                transition: 500,
+                interval: 6000
+            });
+            // Scrollspy
+            const ss = document.querySelectorAll(".scrollspy");
+            M.Scrollspy.init(ss, {});
+        </script>
+ 
