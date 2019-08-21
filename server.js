@@ -29,7 +29,7 @@ axios.get("https://www.pottermore.com/").then(function(response) {
     var results = [];
 
     $(".home-item__wrapper").each(function(i, element) {
-         var title = $(element).find(".home-item__content-inner").text();
+         var title = $(element).find(".home-item__content-inner").text().replace(/\s\s+/g, "");
          var link = $(element).find(".home-item__link").attr("href");
         
 
@@ -40,7 +40,7 @@ axios.get("https://www.pottermore.com/").then(function(response) {
             }); 
          }
 
-   
+         
          
         });
         
