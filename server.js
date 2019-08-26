@@ -90,9 +90,10 @@ app.get("/articles", function(req, res) {
     // and update it's "note" property with the _id of the new note
     db.Note.create(req.body)
     .then(function(dbNote) {
-      return dbArticle.findOneAndUpdate({ _id: req.params.id }, { notes: dbNote._id }, { new: true });
+      return db.Article.findOneAndUpdate({ _id: req.params.id }, { $push : { notes: dbNote._id }}, { new: true, upsert: true });
     })
     .then(function(dbArticle) {
+      console.log(dbArticle);
       res.json(dbArticle);
     })
     .catch(function(err) {
